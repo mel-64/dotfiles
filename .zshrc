@@ -128,6 +128,7 @@ alias fs-sync-offline-init='cd ~; rm -rf .offline_filesync; mkdir .offline_files
 source ~/.config/shellfunctions/fs_sync_offline.sh
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/.cargo/bin"
+export CCACHE_DIR="/var/tmp/ccache"
 export SSH_AUTH_SOCK=~/.bitwarden-ssh-agent.sock
 
 eval "$(zoxide init --cmd cd zsh)"
