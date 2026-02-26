@@ -107,6 +107,9 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 fastfetch --config examples/16
 # fastfetch --config examples/16 --kitty-direct ~/Pictures/shork.png --logo-width 25 --logo-height 10
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+
 # export XDG_CURRENT_DESKTOP=sway
 alias ledger-shell="ledger-agent ~/.ssh/ledger.conf -s -v"
 alias ostui="ostui --mpris"
