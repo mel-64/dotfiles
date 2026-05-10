@@ -57,7 +57,6 @@ source ~/.config/shellfunctions/fs_sync_offline.sh &> /dev/null
 export PATH="$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/go/bin"
 export CCACHE_DIR="/var/tmp/ccache"
 export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
-export XDG_DATA_DIRS="$XDG_DATA_DIRS:$HOME/.local/share/flatpak/exports/share"
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
