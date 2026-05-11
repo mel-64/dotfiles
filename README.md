@@ -12,3 +12,24 @@
 - Run `dotfiles config --local status.showUntrackedFiles no`
 - Run `dotfiles checkout`
 - Finally restart your shell to be able to update the dotfiles via the `dotfiles pull origin main` command.
+
+## Non-exhaustive list of required binaries / packages
+- hypr{idle,land,lock,paper}
+- zsh
+- bash
+- waybar
+- kitty
+- fastfetch
+- websocat
+- Nerd Fonts (0xProto)
+- jq
+- distrobox called arch with 
+    - pear-desktop
+    - feishin
+
+
+## Colors
+- Accent 1: `#de00a399`
+- Accent 2: `#05aff799`
+- Background: `#14141ebf`
+- Text: `#f0f0fae6`
