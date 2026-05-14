@@ -63,4 +63,4 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 source <(fzf --zsh)
 
-fastfetch --config examples/16
+fastfetch
