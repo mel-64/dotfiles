@@ -134,10 +134,6 @@ hl.bind(mainMod .. " + G + L", function()
 	hl.dsp.window.move({ into_group = "right" })
 end)
 
-hl.bind(mainMod .. " + X", function()
-	hl.get_windows()
-end)
-
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
@@ -233,7 +229,6 @@ hl.window_rule({ match = { title = "New Tab — LibreWolf" }, opacity = 0.90 })
 hl.window_rule({ match = { class = "fim" }, float = true })
 hl.window_rule({ match = { title = "Picture-in-Picture" }, float = true, no_initial_focus = true })
 hl.window_rule({ match = { xwayland = true }, no_initial_focus = true })
--- :hl.window_rule({ match = { class = "gamescope" }, immediate = true })
 
 -----------------
 ---- GENERAL ----
