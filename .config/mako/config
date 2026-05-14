@@ -8,7 +8,7 @@ on-touch=invoke-default-action
 font=0xProto Nerd Font 13px
 background-color=#14141EBF
 text-color=#F0F0FAE6
-border-color=#DE00A3E6
+border-color=#DE00A3EE
 border-radius=10
 
 text-alignment=center

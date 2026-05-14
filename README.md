@@ -29,7 +29,9 @@
 
 
 ## Colors
-- Accent 1: `#de00a399`
-- Accent 2: `#05aff799`
+- Accent 1: `#de00a3ee`
+- Accent 2: `#05aff7ee`
+- Accent 1 secondary: `#de00a399`
+- Accent 2 secondary: `#de00a399`
 - Background: `#14141ebf`
 - Text: `#f0f0fae6`
