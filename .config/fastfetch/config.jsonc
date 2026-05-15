@@ -34,8 +34,7 @@
         },
         {
             "key": "│ {##ffffff}󰉉 pkgs      {#keys}│",
-            "format":"{emerge} (emerge)",
-                "type": "packages"
+            "type": "packages"
         },
         {
             "key": "│ {##ffffff} terminal  {#keys}│",
