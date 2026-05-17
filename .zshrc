@@ -18,6 +18,9 @@ zstyle ':completion:*' squeeze-slashes true
 # Color completions
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
+# More verbose process completion
+zstyle ':completion:*:*:*:*:processes' command 'ps -u $USER -o pid,user,command -w'
+
 # Allow navigating up with shift + tab
 bindkey '^[[Z' reverse-menu-complete
 
