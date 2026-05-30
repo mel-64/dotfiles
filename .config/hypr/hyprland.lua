@@ -3,12 +3,21 @@
 ------------------
 
 hl.monitor({
-	output = "",
-	mode = "highrr",
+	output = "eDP-1",
+	mode = "highres",
 	position = "auto",
 	scale = "1.2",
 	transform = 0,
 })
+
+hl.monitor({
+	output = "",
+	mode = "highres",
+	position = "auto",
+	scale = "1.0",
+	transform = 0,
+})
+
 
 -----------------------
 ---- ENVIRONMENT -----
