@@ -53,6 +53,17 @@
       "class<codium>": "",
       "class<org.pulseaudio.pavucontrol>": "",
       "class<org.getmonero.monero-wallet-gui>": "",
+      "class<steam>": "",
+      "class<gamescope>": "",
+      "class<libreoffice-startcenter>": "",
+      "class<libreoffice-writer>": "",
+      "class<libreoffice-calc>": "",
+      "class<libreoffice-impress>": "",
+      "class<libreoffice-math>": "",
+      "class<libreoffice-base>": "",
+      "class<gimp>": "",
+      "class<blender>": "󰂫",
+
 
       "class<kitty> title<.*@.*:.*>": "",
       "class<kitty> title<.*: Jobs: .* of .* complete.*Load avg.*>": "",
