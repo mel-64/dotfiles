@@ -1,7 +1,6 @@
 // Disable JIT
 user_pref("javascript.options.baselinejit", false);
 user_pref("javascript.options.ion", false);
-user_pref("javascript.options.asmjs", false);
 
 // Set Custom Font
 user_pref("font.name.serif.x-western", "0xProto Nerd Font");
