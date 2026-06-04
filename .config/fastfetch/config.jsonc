@@ -52,7 +52,7 @@
             "type": "memory"
         },
         {
-            "key": "│ {##5ccffb} zram-swap {#keys}│",
+            "key": "│ {##5ccffb} swap      {#keys}│",
             "type": "swap",
         },
         {
