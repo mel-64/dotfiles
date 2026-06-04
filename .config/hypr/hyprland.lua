@@ -102,7 +102,7 @@ local mainMod = "SUPER"
 -- Application binds
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty distrobox enter arch"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nemo"))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("cosmic-files"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("librewolf"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("distrobox enter arch -- pear-desktop"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("distrobox enter arch -- feishin"))
