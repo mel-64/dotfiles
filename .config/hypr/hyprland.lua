@@ -86,7 +86,7 @@ hl.env("DBUS_SESSION_BUS_ADDRESS", "unix:path=/run/user/1000/bus")
 -------------------
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("hyprpaper") -- Wallpaper
+	hl.exec_cmd("awww-daemon") -- Wallpaper
 	hl.exec_cmd("mako -c ~/.config/mako/config.ini") -- Notifications
 	hl.exec_cmd("/usr/libexec/polkit-gnome-authentication-agent-1") -- Request root GUI
 	hl.exec_cmd("waybar") -- Bar
