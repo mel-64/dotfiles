@@ -106,7 +106,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("kdeconnectd") -- Kdeconnect background
 	hl.exec_cmd("dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus") -- Launch dbus session manually
 	hl.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ 1")
-	hl.exec_cmd("~/.scripts/ntfy/simple-ntfy-listener.sh main,uptime-kuma,yuri-vault,yuri-vault-backups,yuri-vault-zfs")
+	hl.exec_cmd("~/.scripts/ntfy/simple-ntfy-listener.sh main,uptime-kuma,yuri-vault,yuri-vault-backups,yuri-vault-zfs,torrents,beszel")
 	hl.exec_cmd("hyprctl setcursor Adwaita 24")
 	hl.exec_cmd("hyprlauncher -t -d")
 end)
