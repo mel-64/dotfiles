@@ -109,6 +109,21 @@ local mainMod = "SUPER"
 -- local menu_open_cmd = "pkill -9 wofi || hyprctl -j activewindow | jq -er '.class // \"\"' | grep -qx 'xfreerdp' || exec wofi --show drun --allow-images"
 
 -- Application binds
+
+local function launcher()
+	local forbiddenWindows = {"xfreerdp"}
+	local activeWindow = hl.get_active_window()
+	if activeWindow then
+		for _, window in pairs(forbiddenWindows) do
+			if activeWindow.class == window then
+				return
+			end
+		end
+	end
+	hl.dispatch(hl.dsp.exec_cmd("hyprlauncher -t"))
+end
+
+
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty distrobox enter arch"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("cosmic-files"))
@@ -121,7 +136,7 @@ hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a -f hex"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("makoctl dismiss"), { repeating = true })
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("makoctl dismiss -a"))
 -- hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(menu_open_cmd), { release = true })
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("hyprlauncher -t"), { release = true })
+hl.bind(mainMod .. " + SUPER_L", launcher, { release = true })
 hl.bind("CTRL + ALT + SHIFT_L", hl.dsp.exec_cmd("hyprlock"))
 
 -- WM actions
