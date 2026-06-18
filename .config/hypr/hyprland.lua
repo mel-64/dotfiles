@@ -203,7 +203,7 @@ local function set_rotation(transform)
 			tablet = { transform = transform },
 		},
 	})
-	hl.monitor({ output = "", transform = transform })
+	hl.monitor({ output = hl.get_active_monitor().name, transform = transform })
 end
 
 for i = 0, 3 do
