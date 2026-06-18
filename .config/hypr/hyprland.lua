@@ -2,6 +2,7 @@
 ---- MONITORS ----
 ------------------
 
+-- Integrated screen
 hl.monitor({
 	output = "eDP-1",
 	mode = "highres",
@@ -10,6 +11,7 @@ hl.monitor({
 	transform = 0,
 })
 
+-- PC home screen
 hl.monitor({
 	output = "desc:Samsung Electric Company LS28AG700N H4ZRC01283",
 	mode = "highres",
@@ -18,6 +20,14 @@ hl.monitor({
 	transform = 0,
 })
 
+-- Work screen
+hl.monitor ({
+	output = "desc:HP Inc. HP 534pm CNC53500G8",
+	mode = "3440x1440@99.98Hz",
+	position = "auto",
+	scale = "1.0",
+	transform = 0,
+})
 
 hl.monitor({
 	output = "",
