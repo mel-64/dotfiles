@@ -37,7 +37,6 @@ hl.monitor({
 	transform = 0,
 })
 
-
 -----------------------
 ---- ENVIRONMENT -----
 -----------------------
@@ -133,6 +132,12 @@ local function launcher()
 	hl.dispatch(hl.dsp.exec_cmd("hyprlauncher -t"))
 end
 
+local function lock()
+	hl.timer(function ()
+		hl.dispatch(hl.dsp.dpms({action = "disable"}))
+		hl.dispatch(hl.dsp.exec_cmd("loginctl lock-session"))
+	end, {timeout = 200, type = "oneshot"})
+end
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty distrobox enter arch"))
@@ -147,7 +152,7 @@ hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("makoctl dismiss"), { repeating = tru
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("makoctl dismiss -a"))
 -- hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(menu_open_cmd), { release = true })
 hl.bind(mainMod .. " + SUPER_L", launcher, { release = true })
-hl.bind("CTRL + ALT + SHIFT_L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind("CTRL + ALT + SHIFT_L", lock)
 
 -- WM actions
 hl.bind("F11", hl.dsp.window.fullscreen({ action = "toggle", mode = "maximized" }))
@@ -180,6 +185,7 @@ end)
 hl.bind(mainMod .. " + X", function()
 	hl.get_windows()
 end)
+
 
 -- Move focus with mainMod + vim keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
