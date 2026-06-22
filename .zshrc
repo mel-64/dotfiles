@@ -48,7 +48,7 @@ bindkey  "^[[H"   beginning-of-line # Home key
 bindkey  "^[[F"   end-of-line # End key
 bindkey  "^[[3~"  delete-char # Delete key
 
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias ls='ls --color=tty'
 alias ostui="ostui --mpris"
 alias tldr='tldr -L en'
