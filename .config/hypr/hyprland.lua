@@ -140,6 +140,7 @@ local function lock()
 end
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("kitten quick-access-terminal"))
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty distrobox enter arch"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("cosmic-files"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("librewolf"))
