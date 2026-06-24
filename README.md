@@ -14,7 +14,8 @@
 - Finally restart your shell to be able to update the dotfiles via the `dotfiles pull origin main` command.
 
 ## Non-exhaustive list of required binaries / packages
-- hypr{idle,land,lock,paper}
+- hypr{idle,land,lock}
+- awww
 - zsh
 - bash
 - waybar
