@@ -101,7 +101,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar") -- Bar
 	hl.exec_cmd("hypridle") -- Idle timer
 	hl.exec_cmd("bitwarden-desktop-bin") -- Password manager
-	hl.exec_cmd("gentoo-pipewire-launcher restart") -- Wireplumber
 	hl.exec_cmd("kdeconnectd") -- Kdeconnect background
 	hl.exec_cmd("dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus") -- Launch dbus session manually
 	hl.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ 1")
