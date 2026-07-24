@@ -321,6 +321,9 @@ hl.config({
 		disable_autoreload = true,
 		allow_session_lock_restore = true,
 	},
+	ecosystem = {
+		no_donation_nag = true,
+	}
 })
 
 hl.permission({ binary = "/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", type = "screencopy", mode = "allow" })
