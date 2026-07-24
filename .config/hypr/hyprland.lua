@@ -104,7 +104,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("gentoo-pipewire-launcher restart") -- Wireplumber
 	hl.exec_cmd("kdeconnectd") -- Kdeconnect background
 	hl.exec_cmd("dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus") -- Launch dbus session manually
-	hl.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ 1")
+	hl.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 1")
 	hl.exec_cmd("~/.scripts/ntfy/simple-ntfy-listener.sh main,uptime-kuma,yuri-vault,yuri-vault-backups,yuri-vault-zfs,torrents,beszel")
 	hl.exec_cmd("hyprctl setcursor Adwaita 24")
 	hl.exec_cmd("hyprlauncher -t -d")
@@ -253,8 +253,8 @@ hl.bind(
 	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_SINK@ 2%-"),
 	{ locked = true, repeating = true }
 )
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ toggle"), { locked = true })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("pactl set-source-mute @DEFAULT_SOURCE@ toggle"), { locked = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
