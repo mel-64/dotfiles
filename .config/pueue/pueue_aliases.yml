@@ -1,0 +1,2 @@
+sync: 'sudo emerge --sync --ask=n'
+update: 'emerge -vuDNt --ask=n @world'
