@@ -13,6 +13,7 @@
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
+    "custom/spueue",
     "mpris",
     "bluetooth",
     "wireplumber",
@@ -74,6 +75,17 @@
   "hyprland/window": {
     "format": "<i>{title}</i>",
     "tooltip": false,
+  },
+
+  "custom/spueue": {
+    /*
+    Requires something along following lines in sudoers file if sudo is configured to prompt 4 password:
+    %wheel ALL=(root) NOPASSWD: /usr/bin/pueue -c /etc/pueue.yml status --json
+    */
+    "exec": "sudo pueue -c /etc/pueue.yml status --json | jq --unbuffered --compact-output '{text:([.tasks[]|select(.status|has(\"Running\"))]|length),tooltip:((.tasks|map(.status|keys[])|group_by(.)|map(\"\\(.[0]): \\(length)\")|join(\"\\n\")))}'",
+    "format": "{}",
+    "return-type": "json",
+    "interval": 15
   },
 
   "mpris": {
