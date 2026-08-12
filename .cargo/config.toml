@@ -10,3 +10,13 @@ rustflags = ["-C", "link-arg=-fuse-ld=/usr/bin/wild"]
 
 [profile.release]
 lto = "thin"
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
+
+[profile.debugging]
+inherits = "dev"
+debug = true
