@@ -43,8 +43,10 @@ zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
-setopt HIST_IGNORE_SPACE # Don't save to history if space in front
+setopt inc_append_history
+setopt hist_ignore_space # Don't save to history if space in front
+setopt autocd # Allow cd-ing into dir by executing it
+setopt hist_expire_dups_first
 
 bindkey  "^[[H"   beginning-of-line # Home key
 bindkey  "^[[F"   end-of-line # End key
