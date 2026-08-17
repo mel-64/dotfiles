@@ -9,7 +9,7 @@ linker = "clang"
 rustflags = ["-C", "link-arg=-fuse-ld=/usr/bin/wild"]
 
 [profile.release]
-lto = "thin"
+lto = "fat"
 
 [profile.dev]
 debug = "line-tables-only"
