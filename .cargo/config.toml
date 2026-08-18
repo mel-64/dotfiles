@@ -6,10 +6,10 @@ rustc-wrapper = "/usr/sbin/sccache"
 
 [target.'cfg(target_os = "linux")']
 linker = "clang" 
-rustflags = ["-C", "link-arg=-fuse-ld=/usr/bin/mold", "-C", "link-arg=-flto", "-C", "linker-plugin-lto"]
+rustflags = ["-C", "link-arg=-fuse-ld=/usr/bin/mold", "-C", "link-arg=-flto", "-C", "linker-plugin-lto", "-C", "target-cpu=native"]
 
 [profile.release]
-#lto = "fat"
+lto = "fat"
 
 [profile.dev]
 debug = "line-tables-only"
