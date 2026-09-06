@@ -102,6 +102,10 @@
     "format-alt": "{:%d.%m.%Y}",
     "timezone": "Europe/Zurich",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "actions": {
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
   },
   "cpu": {
     "interval": 5,
