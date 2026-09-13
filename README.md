@@ -1,3 +1,8 @@
+## General
+My personal dotfiles.
+
+![screenshoy](https://shork.ch/f/dotfiles-screenshot.png)
+
 ## TODO:
 - Add usefull README
     - General information
