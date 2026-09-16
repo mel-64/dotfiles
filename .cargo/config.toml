@@ -10,6 +10,7 @@ rustflags = ["-C", "link-arg=-fuse-ld=/usr/bin/mold", "-C", "link-arg=-flto", "-
 
 [profile.release]
 lto = "fat"
+codegen-units = 1
 
 [profile.dev]
 debug = "line-tables-only"
