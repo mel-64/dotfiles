@@ -45,6 +45,7 @@
       "class<thunderbird>": "",
       "class<Minecraft.*>": "󰍳",
       "class<org.polymc.PolyMC>": "󱓞",
+      "class<org.prismlauncher.PrismLauncher>": "󱓞",
       "class<blueman-manager>": "",
       "class<Bitwarden>": "",
       "class<de.schmidhuberj.DieBahn>": "",
