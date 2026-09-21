@@ -36,6 +36,7 @@ My personal dotfiles.
 
 ### Audio / Media / Hardware
 - gentoo-pipewire-launcher / pipewire
+- pear-desktop-bin (yt music desktop app)
 - pavucontrol (audio GUI)
 - playerctl (media keys)
 - brightnessctl (backlight)
@@ -60,7 +61,6 @@ My personal dotfiles.
 - notify-send
 
 ### distrobox called arch with
-- pear-desktop
 - feishin
 
 

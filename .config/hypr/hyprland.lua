@@ -144,7 +144,7 @@ hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("kitten quick-access-terminal"))
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty distrobox enter arch"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("cosmic-files"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("librewolf"))
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("distrobox enter arch -- pear-desktop"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pear-desktop-bin"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("distrobox enter arch -- feishin"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/hyprshot"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/hyprshot"))
@@ -261,6 +261,16 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), { locked = true, repeating = true })
 hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("loginctl lock-session"), { locked = true })
+
+-- Tablet mode
+hl.bind("switch:on:Intel HID switches", function()
+	hl.exec_cmd("notify-send 'Tablet mode' 'Entered tablet mode'")
+	hl.exec_cmd("wvkbd --auto")
+end)
+hl.bind("switch:off:Intel HID switches", function()
+	hl.exec_cmd("notify-send 'Tablet mode' 'Entered laptop mode'")
+	hl.exec_cmd("pkill -9 wvkbd")
+end)
 
 ----------------------
 ---- WINDOW RULES ----
