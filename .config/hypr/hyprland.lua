@@ -139,9 +139,9 @@ local function lock()
 	end, {timeout = 200, type = "oneshot"})
 end
 
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty -1"))
 hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("kitten quick-access-terminal"))
-hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty distrobox enter arch"))
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exec_cmd("kitty -1 distrobox enter arch"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("cosmic-files"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("librewolf"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("pear-desktop-bin"))
