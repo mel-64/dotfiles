@@ -1,0 +1,3 @@
+[submodule ".config/vis/plugins/vis-lspc"]
+	path = .config/vis/plugins/vis-lspc
+	url = https://gitlab.com/muhq/vis-lspc
