@@ -37,7 +37,7 @@
     "window-rewrite": {
       "class<kitty>": "",
       "class<librewolf>": "󰈹",
-      "class<Cinny>": "󰻞",
+      "class<moe.sable.client>": "󰻞",
       "class<com.github.th_ch.youtube_music>": "",
       "class<feishin>": "",
       "class<com.github.IsmaelMartinez.teams_for_linux>": "󰊻",
