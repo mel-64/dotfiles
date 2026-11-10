@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Bandaid solution for neovim until mermaid is added to gentoo repos.. eventually
+
+IMAGE=ghcr.io/mermaid-js/mermaid-cli/mermaid-cli
+
+if ! podman image exists "$IMAGE"; then
+  podman pull --quiet "$IMAGE" >/dev/null
+fi
+
+exec podman run --rm \
+  --security-opt label=disable \
+  --userns keep-id \
+  --user "$(id -u):$(id -g)" \
+  -v "$PWD:/data" \
+  -v /tmp:/tmp \
+  -v "$HOME:$HOME" \
+  -w /data \
+  "$IMAGE" \
+  "--theme" "dark" \
+  "--backgroundColor" "transparent" \
+  "$@"
