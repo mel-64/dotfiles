@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+description="Filesync"
+command="/usr/bin/rclone"
+command_args="mount --vfs-cache-mode writes --vfs-links --vfs-write-back 2s filesync:/files ~/filesync"
+supervisor=supervise-daemon
+output_log="~/.local/state/filesync.log"
+error_log="~/.local/state/filesync.log"
+
+depend() {
+    after net
+    after localmount
+}
